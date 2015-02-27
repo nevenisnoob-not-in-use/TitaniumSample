@@ -1,0 +1,15 @@
+<Alloy>
+	<Window class="container"> 
+		<ScrollView id="galleryView"></ScrollView>
+		<View id="bottomBarView">
+			<Button id="takePhotoBtn" onClick="onCallCamera">カメラ</Button>
+		</View>
+		<Menu id="menu" platform="android">
+			<MenuItem id="openMusicLib"
+				title="ミュージックライブラリ"
+				onClick="onOpenMusicLib"
+				showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM">
+			</MenuItem>
+		</Menu>
+	</Window>
+</Alloy>

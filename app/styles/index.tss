@@ -1,0 +1,26 @@
+".container": {
+	backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0%",   y:"0%"},
+		endPoint:   { x: "0%", y:"100%"},
+		colors: [
+			{ color: "#FF8533", offset: 0.0 },
+			{ color: "#CC5200", offset: 1.0 }
+		]
+	}
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font:{
+		fontSize:32
+	}
+}
+
+"#app_logo": {
+	font: {
+		fontSize: 48
+	}
+}

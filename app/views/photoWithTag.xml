@@ -1,0 +1,16 @@
+<Alloy>
+	<Window class="container">
+		<ImageView id="photoView">
+			
+		</ImageView>
+		<View id="tagView"></View>
+		<View id="bottomBtnView">
+			<Button id="okBtn" onClick="onOk">
+				OK
+			</Button>
+			<Button id="cancelBtn" onClick="onCancel">
+				キャンセル
+			</Button>
+		</View>
+	</Window>
+</Alloy>

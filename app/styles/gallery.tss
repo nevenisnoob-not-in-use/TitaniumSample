@@ -1,0 +1,34 @@
+".container" : {
+  backgroundColor: "#aaa"
+}
+
+"#galleryView" :{
+	height:Titanium.UI.FILL,
+	width: Titanium.UI.FILL,
+	contentHeight: Ti.UI.SIZE,
+	contentWidth: Ti.UI.SIZE,
+	backgroundColor:"#fff"
+}
+
+"#bottomBarView" :{
+	bottom: 0,
+	height: "48dp",
+	width: Titanium.UI.FILL,
+	backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0%",   y:"0%"},
+		endPoint:   { x: "0%", y:"100%"},
+		colors: [
+			{ color: "#FF8533", offset: 0.0 },
+			{ color: "#CC5200", offset: 1.0 }
+		]
+	}
+}
+/*
+"#takePhotoBtn" :{
+	backgroundColor: "#fff",
+	font: {
+		fontSize: "12dp"
+	}
+}
+*/

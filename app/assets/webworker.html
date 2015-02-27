@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Worker example: One-core computation</title>
+ </head>
+ <body>
+    <p>highest prime: <output id="result"></output></p>
+    <script>
+    var worker = new Worker('worker.js');
+    // message event handler
+    worker.onmessage = function (event) {
+        // logging
+        Ti.API.info( 'WebWorkerMessage:'+ JSON.stringify(event) );
+        // update the html page - not actually needed, just for demostration should the WebView be visible
+        document.getElementById('result').textContent = event.data;
+        // fire a titanium app event
+        Ti.App.fireEvent( "WORKER", { data: event.data } );
+    };
+    // error event handler
+    worker.onerror = function(event){
+        Ti.API.error( 'WebWorkerError:'+ JSON.stringify(event) );
+    };   
+  </script>
+ </body>
+</html>

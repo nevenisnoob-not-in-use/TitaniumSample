@@ -1,0 +1,13 @@
+<Alloy>
+
+	<Window class="container">
+		<ScrollView id="musicListScroll" layout="vertical"></ScrollView>
+		<Menu id="menu" platform="android">
+			<MenuItem id="downloadMusic"
+				title="ダウンロード"
+				onClick="onDownloadMusic"
+				showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM">
+			</MenuItem>
+		</Menu>
+	</Window>
+</Alloy>

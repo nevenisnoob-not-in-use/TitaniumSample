@@ -1,0 +1,15 @@
+
+".container" : {
+  
+}
+
+"#singlePicIDTest" : {
+	font: {
+		fontSize: 48
+	}
+}
+
+"#singlePicGroup" : {
+	height: Titanium.UI.FILL,
+	width: Titanium.UI.FILL
+}

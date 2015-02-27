@@ -1,0 +1,50 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<TableView>
+			<TableViewRow>
+				<Label id="app_logo" onClick="onGalleryLoading">ENTER APP</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo2" onClick="onLogo2Click">matrix2D</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo3" onClick="onLogo3Click">matrix3D</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo4" onClick="onLogo4Click">BASIC</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<WebView id="webview" url="/webworker.html" height="0" width="0" visible="false" focusable="false" />
+				<Label id="app_logo5" onClick="onLogo5Click">multi-thread by webview</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo6" onClick="onFacebookClick">facebook</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo7" onClick="onNotification">Notification</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo8" onClick="onDrawerClick">Drawer</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo9" onClick="onListViewClick">ListViewTest</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo10" onClick="onTableViewClick">TableViewTest</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo11" onClick="onTableViewRowClick">TableViewRowTest</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo12" onClick="onWebViewWithJSlib">webViewWithLib</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo13">LOGO</Label>
+			</TableViewRow>
+		</TableView>
+		
+		
+		
+		
+	</Window>
+</Alloy>

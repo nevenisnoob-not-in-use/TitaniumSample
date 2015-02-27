@@ -1,0 +1,43 @@
+
+".container" : {
+  backgroundColor: "#0F0"
+}
+
+"#photoView": {
+	width: Titanium.UI.FILL,
+	height: Titanium.UI.FILL
+}
+
+"#tagView": {
+	
+}
+
+"#bottomBtnView": {
+	bottom: 0,
+	height: "48dp",
+	width: Titanium.UI.FILL,
+	layout:"horizontal",
+	backgroundGradient: {
+		type: "linear",
+		startPoint: { x: "0%",   y:"0%"},
+		endPoint:   { x: "0%", y:"100%"},
+		colors: [
+			{ color: "#FF8533", offset: 0.0 },
+			{ color: "#CC5200", offset: 1.0 }
+		]
+	}
+	
+}
+
+
+"#okBtn": {
+	height:"48dp",
+	width:"50%"
+
+}
+
+"#cancelBtn": {
+	height:"48dp",
+	width:"50%"
+	
+}
