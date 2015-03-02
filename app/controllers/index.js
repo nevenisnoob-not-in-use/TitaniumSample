@@ -73,7 +73,16 @@ function onLogo4Click(e) {
 
 //webview test
 function onLogo5Click(e) {
-	Ti.App.fireEvent("WORKER",{ fake:true, msg:"nothing" } );
+	//listens for background worker thread events
+	//multi-thread test
+	Ti.App.addEventListener("WORKER",function(e){
+	    // convert the event into a string (for simplicity)
+	    var msg = JSON.stringify(e.data);
+	    // update the view label
+	    $.app_logo5.text = msg;
+	    // and write to the log
+	    Ti.API.info( "msg:"+msg );
+	});
 }
 
 //facebook API test
@@ -186,17 +195,6 @@ function onWebViewWithJSlib(e) {
 	win.add(webview);
 	win.open();
 }
- 
-//listens for background worker thread events
-//multi-thread test
-Ti.App.addEventListener("WORKER",function(e){
-    // convert the event into a string (for simplicity)
-    var msg = JSON.stringify(e.data);
-    // update the view label
-    $.app_logo6.text = msg;
-    // and write to the log
-    Ti.API.info( "msg:"+msg );
-});
 
 //gesture test, shake the phone to enter the gallery.
 Ti.Gesture.addEventListener("shake",function(e){
