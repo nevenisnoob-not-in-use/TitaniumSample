@@ -46,3 +46,27 @@ listView.addEventListener("itemclick",function(e){
 });
 
 $.musicListView.add(listView);
+
+function destroy() {
+  $.off();
+}
+
+function onCreateOptionsMenu(e) {
+  if (e.actionBar) {
+    e.actionBar.title = "MusicListView";
+  }
+}
+
+
+/**
+ * Initializes the controller
+ */
+function init() {
+
+  $.on('createOptionsMenu', onCreateOptionsMenu);
+
+}
+
+// PUBLIC
+exports.destroy = destroy;
+exports.init = init;

@@ -6,7 +6,7 @@
  <body>
     <p>highest prime: <output id="result"></output></p>
     <script>
-    var worker = new Worker('worker.js');
+    var worker = new Worker('/worker.js');
     // message event handler
     worker.onmessage = function (event) {
         // logging

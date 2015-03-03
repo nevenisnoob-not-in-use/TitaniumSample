@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container">
+		<Button id="otherButton" title="Other View" onClick="onAlert" />
+	</View>
+</Alloy>

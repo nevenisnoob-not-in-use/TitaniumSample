@@ -1,6 +1,5 @@
 <Alloy>
 	<Window class="container" layout="vertical">
-		<ActionBar></ActionBar>
 		<TableView>
 			<TableViewRow>
 				<Label id="app_logo" onClick="onGalleryLoading">ENTER APP</Label>
@@ -14,9 +13,10 @@
 			<TableViewRow>
 				<Label id="app_logo4" onClick="onLogo4Click">BASIC</Label>
 			</TableViewRow>
+			
 			<TableViewRow>
+				<Label id="app_logo5" onClick="onLogo5Click">multi-thread</Label>
 				<WebView id="webview" url="/webworker.html" height="0" width="0" visible="false" focusable="false" />
-				<Label id="app_logo5" onClick="onLogo5Click">multi-thread by webview</Label>
 			</TableViewRow>
 			<TableViewRow>
 				<Label id="app_logo6" onClick="onFacebookClick">facebook</Label>
@@ -55,13 +55,13 @@
 				<Label id="app_logo17" onClick="onCalendar">Calendar</Label>
 			</TableViewRow>
 			<TableViewRow>
-				<Label id="app_logo18">LOGO</Label>
+				<Label id="app_logo18" onClick="onWindowAnimation">Window Animation</Label>
 			</TableViewRow>
 			<TableViewRow>
-				<Label id="app_logo19">LOGO</Label>
+				<Label id="app_logo19" onClick="onDynamicMenu">Dynamic Menu</Label>
 			</TableViewRow>
 			<TableViewRow>
-				<Label id="app_logo20">LOGO</Label>
+				<Label id="app_logo20" onClick="onTagGroup">Tab Group</Label>
 			</TableViewRow>
 			<TableViewRow>
 				<Label id="app_logo21">LOGO</Label>
@@ -73,7 +73,6 @@
 				<Label id="app_logo23">LOGO</Label>
 			</TableViewRow>
 		</TableView>
-		
 		
 		
 		

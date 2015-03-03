@@ -7,8 +7,7 @@
 		<Menu id="menu" platform="android">
 			<MenuItem id="openMusicLib"
 				title="ミュージックライブラリ"
-				onClick="onOpenMusicLib"
-				showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM">
+				onClick="onOpenMusicLib">
 			</MenuItem>
 		</Menu>
 	</Window>

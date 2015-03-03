@@ -2,7 +2,7 @@
   <Window class="container" navBarHidden="true" fullscreen="false">
     <Widget id="paging" src="de.manumaticx.pagingcontrol" onSelect="tabHandler" />
     <ScrollableView id="scrollableView">
-      <View title="Yellow" backgroundColor="yellow" />
+      <View title="Yellow" backgroundColor="yellow" src="drawerAbout"/>
       <View title="Orange" backgroundColor="orange" />
       <View title="Red" backgroundColor="red" />
       <View title="Purple" backgroundColor="purple" />

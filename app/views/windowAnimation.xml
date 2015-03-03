@@ -1,0 +1,5 @@
+<Alloy>
+    <Window backgroundColor="blue" onPostlayout="animateOpen" >
+        <Label color="orange">Animated Window</Label>
+    </Window>
+</Alloy>

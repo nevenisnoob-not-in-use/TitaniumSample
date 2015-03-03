@@ -1,0 +1,7 @@
+<Alloy>
+    <TableView backgroundColor="#3F3D3D" onClick="onSelect">
+      <Require src="drawerMenuRow" title="Main" controller="drawerMain"/>
+      <Require src="drawerMenuRow" title="About" controller="drawerAbout"/>
+      <Require src="drawerMenuRow" title="MusicList" controller="musicListView"/>
+    </TableView>
+</Alloy>

@@ -1,0 +1,35 @@
+<Alloy>
+        <TabGroup backgroundColor="white" >
+            <Tab id="tab1" title="Tab 1" icon="KS_nav_views.png">
+                <Window id="win1" title="Tab 1">
+                   <Label id="label1" color="#999">I am Window 1</Label>
+                </Window>
+            </Tab>
+            <Tab id="tab2" title="Tab 2" icon="KS_nav_views.png">
+                <Window id="win2" title="Tab 2">
+                    <Label id="label2" color="#999">I am Window 2</Label>
+                </Window>
+            </Tab>
+            <Tab id="tab3" title="Tab 3" icon="KS_nav_views.png">
+                <Window id="win3" title="Tab 3">
+                    <Label id="label3" color="#999">I am Window 3</Label>
+                </Window>
+            </Tab>
+            <Tab id="tab4" title="Tab 4" icon="KS_nav_views.png">
+                <Window id="win4" title="Tab 4">
+                    <Label id="label4" color="#999">I am Window 4</Label>
+                </Window>
+            </Tab>
+            <Tab id="tab5" title="Tab 5" icon="KS_nav_views.png">
+                <Window id="win5" title="Tab 5">
+                    <Label id="label5" color="#999">I am Window 5</Label>
+                </Window>
+            </Tab>
+            <Tab id="tab6" title="Tab 6" icon="KS_nav_views.png">
+                <Window id="win6" title="Tab 6">
+                    <Label id="label6" color="#999">I am Window 6</Label>
+                </Window>
+            </Tab>
+            <!-- Use the Require tag to include external Ti.UI.Tab views -->
+        </TabGroup>
+    </Alloy>

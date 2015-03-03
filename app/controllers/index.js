@@ -69,6 +69,16 @@ function onLogo4Click(e) {
 		duration: 500
 	});
 	$.app_logo4.animate(a);
+	
+		var activity = $.index.activity;
+		//var activity = Ti.Android.currentActivity;
+		activity.onCreateOptionMenu = function(e) {
+			var menu = e.menu;
+			menu.add({title:"menuItem1", showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM});
+			menu.add({title:"menuItem2"});
+		};      
+		// $.index.invalidateOptionsMenu();
+		activity.invalidateOptionsMenu();
 }
 
 //webview test
@@ -163,7 +173,7 @@ function onNotification(e){
 //plugin test (something wrong with the drawer plugin)
 function onDrawerClick(e){
 	if (OS_ANDROID) {
-		var drawerMenu = Alloy.createController("menu").getView();
+		var drawerMenu = Alloy.createController("drawerIndex").getView();
 		drawerMenu.open();
 	}
 }
@@ -171,7 +181,12 @@ function onDrawerClick(e){
 //performance test: listView
 function onListViewClick(e) {
 	var musicListView = Alloy.createController("musicListView").getView();
-	musicListView.open();	
+	
+	musicListView.open({
+		activityEnterAnimation: Ti.Android.R.anim.slide_in_left,
+		activitExitAnimation: Ti.Android.R.anim.slide_out_right
+	});	
+	//$.index.close();
 } 
 
 //performance test: tableView
@@ -581,6 +596,12 @@ function onNappDrawer(e) {
 	drawer.open();
 }
 
+function onWindowAnimation(e) {
+	var windowAnimation = Alloy.createController("windowAnimation").getView();
+	windowAnimation.open();
+
+}
+
 
 //gesture test, shake the phone to enter the gallery.
 Ti.Gesture.addEventListener("shake",function(e){
@@ -603,4 +624,70 @@ if (OS_ANDROID) {
 //	$.index.activity.actionBar.hide();
 }
 
-$.index.open();
+function onDynamicMenu(e) {
+	var win = Ti.UI.createWindow({
+	  fullscreen: false
+	});
+	var LOGIN = 1, LOGOUT = 2;
+	var loggedIn = false;
+	
+	var activity = win.activity;
+	
+	activity.onCreateOptionsMenu = function(e){
+	  var menu = e.menu;
+	  var login = menu.add({ title: "Login", itemId: LOGIN });
+	  login.setIcon("login.png");
+	  login.addEventListener("click", function(e) {
+	    loggedIn = true;
+	    // In Android 3.0 and above we need to call invalidateOptionsMenu() for menu changes at runtime
+	    win.activity.invalidateOptionsMenu();
+	  });
+	  var logout = menu.add({ title: "Logout", itemId: LOGOUT });
+	  logout.setIcon("logout.png");
+	  logout.addEventListener("click", function(e) {
+	    loggedIn = false;
+	    // In Android 3.0 and above we need to call invalidateOptionsMenu() for menu changes at runtime
+	    win.activity.invalidateOptionsMenu();
+	  });
+	};
+	
+	activity.onPrepareOptionsMenu = function(e) {
+	  var menu = e.menu;
+	  menu.findItem(LOGIN).setVisible(!loggedIn);
+	  menu.findItem(LOGOUT).setVisible(loggedIn);
+	};
+	win.open();
+}
+
+function onTagGroup(e){
+	tab = Alloy.createController("tagGroup").getView();
+	tab.open();
+}
+
+
+$.index.open({
+	activityEnterAnimation: Ti.Android.R.anim.slide_in_left,
+	activityExitAnimation: Ti.Android.R.anim.slide_out_right
+});
+
+
+$.index.addEventListener("open", function(){
+	//an activity object is not created until the window is opened!!!!
+	//that's why you have to get the acivity in the 'open' function.
+	if (OS_ANDROID) {
+		var activity = $.index.activity;
+		//var activity = Ti.Android.currentActivity;
+		activity.onCreateOptionMenu = function(e) {
+			var menu = e.menu;
+			menu.add({title:"menuItem1", showAsAction: Ti.Android.SHOW_AS_ACTION_IF_ROOM});
+			menu.add({title:"menuItem2"});
+		};      
+		// $.index.invalidateOptionsMenu();
+		activity.invalidateOptionsMenu();
+		if (activity.actionBar) {
+			activity.actionBar.title = "actionBar test";
+		} else {
+			Ti.API.info("there is no actionBar");
+		}
+	}
+});
