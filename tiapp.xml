@@ -49,9 +49,14 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="android">facebook</module>
-        <module platform="iphone">facebook</module>
         <module platform="android">com.tripvi.drawerlayout</module>
+        <module platform="iphone">dk.napp.drawer</module>
+        <module platform="android">com.alcoapps.androidplaylists</module>
+        <module platform="iphone">ti.sq</module>
+        <module platform="android">dk.napp.drawer</module>
+        <module platform="android">facebook</module>
+        <module platform="android">ti.sq</module>
+        <module platform="iphone">facebook</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

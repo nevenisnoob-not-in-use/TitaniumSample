@@ -1,5 +1,6 @@
 <Alloy>
 	<Window class="container" layout="vertical">
+		<ActionBar></ActionBar>
 		<TableView>
 			<TableViewRow>
 				<Label id="app_logo" onClick="onGalleryLoading">ENTER APP</Label>
@@ -39,7 +40,37 @@
 				<Label id="app_logo12" onClick="onWebViewWithJSlib">webViewWithLib</Label>
 			</TableViewRow>
 			<TableViewRow>
-				<Label id="app_logo13">LOGO</Label>
+				<Label id="app_logo13" onClick="onScrollviewTab">ScrollviewTab</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo14" onClick="onInAppNotification">In-app Notification</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo15" onClick="onPhotoGridWidget">photoGrid</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo16" onClick="onNappDrawer">NappDrawer</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo17" onClick="onCalendar">Calendar</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo18">LOGO</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo19">LOGO</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo20">LOGO</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo21">LOGO</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo22">LOGO</Label>
+			</TableViewRow>
+			<TableViewRow>
+				<Label id="app_logo23">LOGO</Label>
 			</TableViewRow>
 		</TableView>
 		

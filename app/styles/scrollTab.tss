@@ -1,0 +1,9 @@
+".container" : {
+    backgroundColor: "#fff",
+    layout: "vertical"
+},
+"#paging" : {
+    top: 0,
+    indicatorColor: "#09c",
+    tabs: true
+}
